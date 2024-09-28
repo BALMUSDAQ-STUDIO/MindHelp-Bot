@@ -1,4 +1,5 @@
-﻿
+﻿![Logo](https://raw.githubusercontent.com/BALMUSDAQ-STUDIO/Balmuzdaq-logos/refs/heads/main/balmuz_logo_mindhelpbot.png)
+
 ---
 
 # MIND HELP BOT
