@@ -1,12 +1,17 @@
 ﻿![Logo](https://raw.githubusercontent.com/BALMUSDAQ-STUDIO/Balmuzdaq-logos/refs/heads/main/Balmuz_logo_1.png)
 
----
+## MIND HELP BOT
 
-# MIND HELP BOT
+<img src="https://raw.githubusercontent.com/BALMUSDAQ-STUDIO/Balmuzdaq-logos/refs/heads/main/Снимок%20экрана%202024-09-28%20в%2019.24.10.png" alt="Alt text" width="400" align="right"/>
 
-**MIND HELP BOT** is a Telegram bot designed to provide psychological support, prevent suicidal behavior and self-harm, and promote mental health well-being. The bot uses artificial intelligence to assist users in crisis situations, offering both text-based and voice-based support.
 
-## Features
+
+<span>MIND HELP BOT is a Telegram bot designed to provide psychologicsupport,<br>
+prevent suicidal behavior and self-harm, and promote mental health well-being. <br>
+The bot uses artificial intelligence to assist users in crisis situations,
+offering both <br> text-based and voice-based support.</span>
+
+ **Features**
 
 - **Mental Health Support**: The bot assists users in managing negative emotions, stress, and mental health challenges through guided conversations and resources.
 - **Suicide and Self-Harm Prevention**: Built-in algorithms help identify at-risk users and provide immediate intervention or support.
@@ -26,7 +31,7 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/MIND_HELP_BOT.git
+    git clone https://github.com/yourusername/MindHelp-Bot.git
     cd MIND_HELP_BOT
     ```
 
@@ -50,7 +55,7 @@
 4. Run the bot:
 
     ```bash
-    python bot.py
+    python main.py
     ```
 
 ## Usage
@@ -58,15 +63,11 @@
 1. Open Telegram and find your bot using the bot username.
 2. Start the conversation with `/start`.
 3. The bot will offer guided support to address mental health concerns.
-4. You can request voice responses using the `/voice` command.
 
 ## Key Files
 
-- `bot.py`: The main bot logic and event handling.
-- `conversation_handler.py`: Handles different conversation flows and interactions with the user.
-- `gtts_handler.py`: Converts text responses into voice using Google Text-to-Speech.
-- `openai_handler.py`: Manages the OpenAI API calls for AI-generated responses.
-- `design/`: Contains Figma design files and mockups.
+- `main.py`: The main bot logic and event handling.
+- `assets.py`: Assets for bot.
 
 ## Contributing
 
@@ -76,7 +77,18 @@ Contributions are welcome! Please fork the repository, create a new branch for y
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a pull request
+5. Open a pull 
+
+
+## Authors
+
+- [@maksimkaprosuperhacker69](https://www.github.com/maksimkaprosuperhacker69)
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at balmuzdaq.studio@gmail.com
+
 
 ## License
 
