@@ -1,26 +1,16 @@
 AI_ROLE=("""You are a highly skilled and compassionate psychologist with deep expertise in addressing psychological challenges. Your mission is to provide individuals with thoughtful guidance and empathetic support. In every interaction, ensure that your advice is not only informative but also comforting and encouraging. Prioritize the emotional well-being of the person you're helping by fostering a warm, non-judgmental space for open communication. Always engage in a way that promotes trust and safety. Your responses must be in English, and at the end of each message, include a thoughtful question to encourage ongoing dialogue. Feel free to use an appropriate emoji to convey warmth and connection.""")
 
 
-SLEEP_TIP="""1. Maintain a Consistent Sleep Schedule
-Go to bed and wake up at the same time daily to regulate your body’s clock.
-2. Create a Relaxing Bedtime Routine
-Engage in calming activities like reading or meditation before bed.
-3. Limit Screen Time Before Bed
-Avoid screens 30-60 minutes before sleep to prevent melatonin disruption.
-4. Optimize Your Sleep Environment
-Keep your bedroom dark, quiet, and cool for better sleep.
-5. Watch Your Diet
-Avoid heavy meals, caffeine, and alcohol close to bedtime.
-6. Exercise Regularly
-Aim for at least 30 minutes of moderate exercise most days, but avoid vigorous workouts before bed.
-7. Manage Stress
-Use relaxation techniques like deep breathing or mindfulness to reduce anxiety before sleep.
-8. Limit Naps
-Keep naps short (20-30 minutes) and avoid late-afternoon naps.
-9. Seek Natural Light
-Spend time outdoors in the morning to help regulate your circadian rhythm.
-10. Consider Professional Help
-If sleep issues persist, consult a healthcare professional for support."""
+SLEEP_TIP="""1. Maintain a Consistent Sleep Schedule: "To help regulate your body's internal clock, it's important to go to bed and wake up at the same time every day, even on weekends."
+2. Create a Relaxing Bedtime Routine: "Engage in calming activities, such as reading or practicing meditation, before bedtime to signal to your body that it’s time to wind down."
+3. Limit Screen Time Before Bed: "To avoid disrupting your melatonin production, refrain from using screens for 30 to 60 minutes prior to sleep."
+4. Optimize Your Sleep Environment: "Ensure your bedroom is conducive to sleep by keeping it dark, quiet, and cool. This will create an ideal environment for restorative rest."
+5 .Watch Your Diet: "Be mindful of your evening meals. Try to avoid heavy foods, caffeine, and alcohol close to bedtime, as these can interfere with your sleep quality."
+6. Exercise Regularly: "Aim for at least 30 minutes of moderate exercise most days. However, avoid vigorous workouts in the hours leading up to bedtime, as they can be stimulating."
+7. Manage Stress: "Incorporate relaxation techniques such as deep breathing exercises or mindfulness practices into your evening routine to help alleviate anxiety before sleep."
+8. Limit Naps: "If you need to nap, keep it short—about 20 to 30 minutes—and avoid napping in the late afternoon to prevent interference with nighttime sleep."
+9. Seek Natural Light: "Try to spend time outdoors in the morning. Natural light exposure helps regulate your circadian rhythm, enhancing your ability to fall asleep at night."
+10. Consider Professional Help: "If you continue to experience sleep difficulties despite making these changes, it may be beneficial to consult a healthcare professional for further support." """
 
 ACTIVITY_TIP="""1. Find Activities You Enjoy
 Choose exercises you like, whether it's walking, cycling, dancing, or swimming. Enjoyable activities are easier to stick with and make workouts feel less like a chore.
