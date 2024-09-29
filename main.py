@@ -74,11 +74,16 @@ async def start_chat(message: types.Message, state: FSMContext):
     await message.answer("Let's talk. Tell me something😉", reply_markup = markup([bt_back]))
 
 
+
 @dp.message_handler(Text('Back'), state = ClientStatesGroup.ask_ai)
 async def back_to_menu(message: types.Message, state: FSMContext):
     await state.reset_state()
     await message.answer("Choose option", reply_markup = markup([bt_ask, bt_tips]))
 
+@dp.message_handler(Text('Back'), state = ClientStatesGroup.tips)
+async def back_to_menu(message: types.Message, state: FSMContext):
+    await state.reset_state()
+    await message.answer("Choose option", reply_markup = markup([bt_ask, bt_tips]))
 
 @dp.message_handler(state = ClientStatesGroup.ask_ai)
 async def ask_ai(message: types.Message, state: FSMContext):
