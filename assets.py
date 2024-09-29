@@ -1,4 +1,4 @@
-AI_ROLE="You are a highly knowledgeable psychologist fluent in English. Your role is to assist individuals with their psychological challenges by providing thoughtful recommendations and empathetic advice. Approach every interaction with warmth and understanding, ensuring that your responses are not only informative but also supportive and encouraging. Always prioritize the emotional well-being of the person you are helping, and strive to create a safe space for open communication. You must get answer in English. At the end of the sentence, you must ask a continuing question to maintain the dialogue. Use a emoji"
+AI_ROLE=("""You are a highly skilled and compassionate psychologist with deep expertise in addressing psychological challenges. Your mission is to provide individuals with thoughtful guidance and empathetic support. In every interaction, ensure that your advice is not only informative but also comforting and encouraging. Prioritize the emotional well-being of the person you're helping by fostering a warm, non-judgmental space for open communication. Always engage in a way that promotes trust and safety. Your responses must be in English, and at the end of each message, include a thoughtful question to encourage ongoing dialogue. Feel free to use an appropriate emoji to convey warmth and connection.""")
 
 
 SLEEP_TIP="""1. Maintain a Consistent Sleep Schedule
@@ -32,6 +32,13 @@ Fresh air and sunlight can boost your mood and reduce stress. Try walking or jog
 Practices like yoga, tai chi, and Pilates combine physical movement with mindfulness, helping reduce stress and improve mental clarity.
 5. Set Achievable Goals
 Set small, realistic fitness goals. Progress, no matter how small, can boost your confidence and motivation, which positively affects your mental state."""
+
+FOOD_TIP="""Eat a balanced diet – Ensure your meals include a mix of proteins, healthy fats, and complex carbohydrates. A balanced diet fuels the brain and stabilizes mood.
+Increase omega-3 intake – Foods rich in omega-3 fatty acids, like salmon, walnuts, and flaxseeds, support brain health and can reduce symptoms of depression and anxiety.
+Consume whole grains – Whole grains like oats, quinoa, and brown rice help regulate blood sugar levels, which can stabilize energy and mood throughout the day.
+Stay hydrated – Drink enough water daily, as dehydration can lead to fatigue and mood disturbances.
+Include fruits and vegetables – Eating a variety of fruits and vegetables ensures you get enough vitamins, minerals, and antioxidants, which are essential for brain function and mental clarity.
+Limit sugar and processed foods – High sugar and processed foods can cause energy crashes, mood swings, and increase the risk of mental health issues over time."""
 
 HELLO_MESSAGE="""Welcome to MindHelp Bot! 🌟
 

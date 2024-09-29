@@ -50,21 +50,18 @@ bt_tips = KeyboardButton('Tips')
 bt_back = KeyboardButton('Back')
 
 def markup(bts):
-    markup=ReplyKeyboardMarkup()
+    markup=ReplyKeyboardMarkup(resize_keyboard=True)
     print(bts)
     for i in bts:
         markup.add(i)
     return markup
 
 def text_to_speech(message):
-    # Get the text message
     text = message
-    # Generate audio file using the Google TTS API
     tts = gTTS(text = text)
     audio_file = TemporaryFile()
     tts.write_to_fp(audio_file)
     audio_file.seek(0)
-    # Convert audio file to ogg format and send to user
     audio = AudioSegment.from_file(audio_file, format = "mp3")
     ogg_file = TemporaryFile()
     audio.export(ogg_file, format = "ogg")
@@ -104,81 +101,24 @@ async def ask_ai(message:types.Message,state:FSMContext):
 @dp.message_handler(Text('Tips'))
 async def cancel(message:types.Message,state:FSMContext):
     await ClientStatesGroup.tips.set()
-    await message.answer("Here are tips on how to improve your mental state☺️", reply_markup = markup([KeyboardButton('Sleep'),KeyboardButton('Physical activity'),bt_back]))
+    await message.answer("Here are tips on how to improve your mental state☺️", reply_markup = markup([KeyboardButton('Food'),KeyboardButton('Sleep'),KeyboardButton('Physical activity'),bt_back]))
 
 
 @dp.message_handler(Text("Sleep"),state=ClientStatesGroup.tips)
 async def tips_sleep(message:types.Message,state:FSMContext):
     await message.answer_chat_action("typing")
-    await message.answer(assets.SLEEP_TIP,reply_markup = markup([KeyboardButton('Sleep'),KeyboardButton('Physical activity'),bt_back]))
+    await message.answer(assets.SLEEP_TIP,reply_markup = markup([KeyboardButton('Food'),KeyboardButton('Sleep'),KeyboardButton('Physical activity'),bt_back]))
 
 @dp.message_handler(Text("Physical activity"),state=ClientStatesGroup.tips)
 async def tips_sleep(message:types.Message,state:FSMContext):
     await message.answer_chat_action("typing")
-    await message.answer(assets.ACTIVITY_TIP,reply_markup = markup([KeyboardButton('Sleep'),KeyboardButton('Physical activity'),bt_back]))
+    await message.answer(assets.ACTIVITY_TIP,reply_markup = markup([KeyboardButton('Food'),KeyboardButton('Sleep'),KeyboardButton('Physical activity'),bt_back]))
 
+@dp.message_handler(Text("Food"),state=ClientStatesGroup.tips)
+async def tips_sleep(message:types.Message,state:FSMContext):
+    await message.answer_chat_action("typing")
+    await message.answer(assets.FOOD_TIP,reply_markup = markup([KeyboardButton('Food'),KeyboardButton('Sleep'),KeyboardButton('Physical activity'),bt_back]))
 
-"""
-
-await ClientStatesGroup.next()
-
-
-@dp.message_handler(state=ClientStatesGroup.max_price)
-async def min_price(message:types.Message,state:FSMContext):
-    async with state.proxy() as data:
-        data['max_price']=message.text
-    await ClientStatesGroup.next()
-    await message.answer('Введите желаемую скидку')
-
-@dp.message_handler(state=ClientStatesGroup.discount)
-async def min_price(message:types.Message,state:FSMContext):
-    async with state.proxy() as data:
-        data['discount']=message.text
-        await message.answer('Please waiting...')
-        await bot.send_chat_action(message.chat.id, 'typing')
-
-
-        with open('result.json') as file:
-            result=json.load(file)
-            if len(result)==0:
-                await message.answer('Скинов не найдено(')
-                await state.reset_state()
-
-            if flag:
-                for index,item in enumerate(result):
-                    card = f"{hlink(item.get('full_name'),item.get('3d'))}\n" \
-                f"{hbold('Скидка:')}{int(item.get('discount'))}%\n" \
-                f"{hbold('Цена:')}${int(item.get('price'))}\n" \
-                f"_____________________________________________________"
-
-                    if index%20==0:
-                        time.sleep(3)
-
-
-                    await message.answer(card)
-                await state.reset_state()
-                
-                
-def voice_query(message):
-    if message.voice:
-        # Get the voice recording file
-        file_info = bot.get_file(message.voice.file_id)
-        file_url = 'https://api.telegram.org/file/bot{0}/{1}'.format(API_TOKEN, file_info.file_path)
-        voice_file = requests.get(file_url)
-        # Convert voice file to audio and then to text using the Google TTS API
-        audio = AudioSegment.from_file(io.BytesIO(voice_file.content))
-        audio_file = TemporaryFile()
-        audio.export(audio_file, format = "wav")
-        audio_file.seek(0)
-        r = sr.Recognizer()
-        with sr.AudioFile(audio_file) as source:
-            audio_data = r.record(source)
-        text = r.recognize_google(audio_data)
-    # Send the text message back to the user response = generate_response(text) bot.reply_to(message, response)
-    else:
-        bot.reply_to(message, "Please send a voice recording.")
-
-"""
 executor.start_polling(dp,skip_updates=True)
 
 
